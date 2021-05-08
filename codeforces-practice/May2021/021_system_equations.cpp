@@ -1,13 +1,21 @@
 //
-//   Codeforces - Title
-//   
+//   Codeforces - A. System of Equations
+//   https://codeforces.com/problemset/problem/214/A
 //
 
 #include <bits/stdc++.h>
 using namespace std;
 
 void solve() {
-    
+    int n, m;
+    cin >> n >> m;
+    int ans = 0;
+    for(int i = 0; i <= 1000; i++) {
+        if(n - (i*i) == sqrt(m - i)) {
+            ans++;
+        }
+    }
+    cout << ans;
 }
 
 int main() {
