@@ -9,20 +9,12 @@ void solve() {
     int T;
     cin >> T;
     while(T--) {
-        int x, y, a, b, jump = 0;
+        int x, y, a, b;
         cin >> x >> y >> a >> b;
-        while(y >= 0){
-            if(x == y) {
-                cout << jump << "\n";
-                break;
-            }
-            if(x > y) {
-                cout << -1 << "\n";
-                break;
-            }
-            jump += 1;
-            x += a;
-            y -= b;
+        if((y - x) % (a + b) == 0) {
+            cout << (y - x) / (a + b) << "\n";
+        } else {
+            cout << -1 << "\n";
         }
     }
 }
