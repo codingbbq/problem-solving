@@ -1,23 +1,18 @@
 //
-//   Codeforces - A. Divisibility Problem
-//   https://codeforces.com/problemset/problem/1328/A
+//   Codeforces - Title
+//   
 //
 
 #include <bits/stdc++.h>
 using namespace std;
 
 void solve() {
-    int T;
-    cin >> T;
-    while(T--) {
-        int a, b;
-        cin >> a >> b;
-        if(a % b == 0) {
-            cout << 0 << "\n";
-        } else {
-            cout << (((a / b) + 1) * b) - a << "\n";
-        }
-
+    int n;
+    cin >> n;
+    if(n % 2 == 0) {
+        cout << 4 << " " << n - 4;
+    } else {
+        cout << 9 << " " << n - 9;
     }
 }
 
