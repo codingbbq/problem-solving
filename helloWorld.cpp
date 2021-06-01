@@ -1,8 +1,10 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 int main() {
-    cout << "I want to learn C++ in 2021" << endl;
+    string s;
+    cin >> s;
+    cout << s << endl;
     return 0;
 }
