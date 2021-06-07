@@ -9,17 +9,17 @@ using namespace std;
 void solve() {
     int n;
     cin >> n;
-    int a[n];
-    int count = 0;
+    long long a[n];
+    long long count = 0;
+    long long mx = 0;
     for(int i = 0; i < n; i++) {
         cin >> a[i];
-        if(i == 0) {
-            continue;
+        mx = max(mx, a[i]);
+        
+        if(a[i] < mx) {
+            count += mx - a[i];
         }
 
-        if(a[i] < a[i-1]) {
-            count += a[i-1] - a[i];
-        }
     }
 
     cout << count;
