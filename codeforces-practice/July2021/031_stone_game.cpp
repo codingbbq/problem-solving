@@ -35,10 +35,32 @@ void solve() {
 
     	}
 
+    	int t1 = 0;
     	// There are three combinations.
     	// Delete both from left
+    	if(least.first < greatest.first) {
+    		t1 = (least.first - 0) + 1 + (greatest.first - least.first);
+    	} else {
+    		t1 = (greatest.first - 0) + 1 + (least.first - greatest.first);
+    	}
+
     	// Delete both from right
+    	if(greatest.first > least.first) {
+    		t1 = min(t1, ((n - greatest.first) + (greatest.first - least.first)));
+    	} else {
+    		t1 = min(t1, ((n - least.first) + (least.first - greatest.first)));
+    	}
+
     	// Delete one from left and then from right or vice versa
+    	
+    	// When least is on left and greatest on right
+    	t1 = min(t1, (least.first - 0) + 1 + (n - greatest.first));
+
+    	// When greatest is on left and least on right
+    	t1 = min(t1, (greatest.first - 0) + 1 + (n - least.first));
+
+    	cout << t1 << "\n";
+
 
     }
 }
