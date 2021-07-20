@@ -15,7 +15,7 @@ void solve() {
     	cin >> s >> a >> b >> c;
     	long long total = s/c;
 
-    	if(total > a) {
+    	if(total >= a) {
     		total += (total/a) * b;
     	}
 

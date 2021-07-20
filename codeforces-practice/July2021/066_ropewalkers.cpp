@@ -10,15 +10,21 @@ void solve() {
     int a, b, c, d;
     cin >> a >> b >> c >> d;
 
-    if(a > b) {
+    if(b < a) {
     	swap(a, b);
     }
 
-    if(c < b) {
-    	swap(c, b);
+    if(b > c) {
+    	swap(b, c);
+    	if(b < a) {
+    		swap(a, b);
+    	}
     }
+   
+   	// cout << a << b << c << "\n";
 
     int diff1 = abs(a - b);
+
     if(diff1 < d) {
     	diff1 = d - diff1; 
     } else {
