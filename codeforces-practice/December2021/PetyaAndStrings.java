@@ -1,4 +1,4 @@
-// https://codeforces.com/group/yg7WhsFsAp/contest/355490/problem/P01
+// https://codeforces.com/group/yg7WhsFsAp/contest/355490/problem/P04
 
 import java.io.BufferedReader;
 import java.io.IOException;
