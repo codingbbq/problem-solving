@@ -4,12 +4,12 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class TwoSum {
+public class TwoSumProblem {
 
     public static void main(String[] args) {
         int[] n = {3,2,4};
         int target = 6;
-        TwoSum ts = new TwoSum();
+        TwoSumProblem ts = new TwoSumProblem();
         int[] ans = ts.twoSum(n, target);
         System.out.println(Arrays.toString(ans));
     }
