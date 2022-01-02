@@ -1,9 +1,6 @@
 // https://leetcode.com/problems/verifying-an-alien-dictionary/
 // 953. Verifying an Alien Dictionary
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class AlienDictionary {
     public static void main(String[] args) {
         String[] words = {"kuvp","q"};
