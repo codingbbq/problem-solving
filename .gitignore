@@ -3,3 +3,7 @@
 **/.idea
 **/*.iml
 **/out
+
+# For Typescript related
+**/node_modules
+**/dist
