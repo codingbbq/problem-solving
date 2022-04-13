@@ -10,8 +10,58 @@ class HashTable {
         }
         return hash;
     }
+
+    set(key, value) {
+        let address = this._hash(key);
+        if(!this.data[address]) {
+            this.data[address] = [];
+        }
+        this.data[address].push([key, value]);
+        return this.data;
+    }
+
+    get(key) {
+        let address = this._hash(key);
+        const currentBucket = this.data[address];
+        if(currentBucket) {
+            for(let i = 0; i < currentBucket.length; i++) {
+                if(currentBucket[i][0] == key) {
+                    return currentBucket[i][1];
+                }
+            }
+        }
+        return undefined;
+    }
+
+    keys() {
+        const keyArrays = [];
+        for(let i = 0; i < this.data.length; i++) {
+            if(this.data[i]) {
+                keyArrays.push(this.data[i][0][0]);
+            }
+        }
+        return keyArrays;
+    }
 }
 
 const myHashTable = new HashTable(50);
 myHashTable.set('grapes', 10000);
-myHashTable.get('grapes');
+myHashTable.set('oranges',5000);
+myHashTable.set('apples', 800);
+console.log(myHashTable.data);
+/* [
+    <23 empty items>,       
+    [ [ 'grapes', 10000 ] ],
+    <15 empty items>,       
+    [ [ 'apples', 800 ] ],  
+    <5 empty items>,        
+    [ [ 'oranges', 5000 ] ],
+    <4 empty items>
+  ] */
+
+const val = myHashTable.get('grapes');
+console.log(val);
+// 10000
+
+console.log(myHashTable.keys());
+// [ 'grapes', 'apples', 'oranges' ]
