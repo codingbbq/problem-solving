@@ -1,0 +1,25 @@
+##1 Sort 10 schools around your house by distance
+Insertion Sort
+
+##2 eBay sorts listing by the current bid amount
+radix or counting sort. Numbers need to sorted as bid are always going to be Numbers
+
+##3 Sport scores on ESPN
+Quick sort
+
+##4 Massive database
+merge sort - Performance O(nlogn);
+
+##5 Almost sorted review data needs to be update and add 2 new reviews
+Insertion sort, as almost sorted 
+
+##6 Temperature records for past 50 years
+Radix counting sort
+Quick sort
+
+##7 Large user name db. Data is random
+Merge sort / Quick sort
+
+##8 You want to teach sorting first time
+Bubble sort or Selection sort
+
