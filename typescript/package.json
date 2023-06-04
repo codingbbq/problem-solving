@@ -1,0 +1,17 @@
+{
+  "name": "learn-prep-enjoy",
+  "description": "Various code snippets to learn and prepare for interviews",
+  "version": "1.0.0",
+  "keywords": ["Learning", "TS", "Interviews", "Problem Solving"],
+  "author": "codingbbq",
+  "license": "MIT",
+  "homepage": "",
+  "scripts": {
+    "x": "yarn ts-node"
+  },
+  "dependencies": {
+    "@types/node": "^20.2.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  }
+}
